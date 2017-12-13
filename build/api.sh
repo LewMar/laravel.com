@@ -1,5 +1,5 @@
 #!/bin/bash
-base=/home/forge/laravel.com
+base=/home/vagrant/PHP/laraveldoc
 sami=${base}/build/sami
 
 cd $sami

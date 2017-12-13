@@ -1,14 +1,22 @@
 #!/bin/bash
-base=/home/forge/laravel.com
-docs=${base}/resources/docs
+base=/home/vagrant/PHP/laraveldoc
 
-cd ${docs}/4.2 && git pull origin 4.2
-cd ${docs}/5.0 && git pull origin 5.0
-cd ${docs}/5.1 && git pull origin 5.1
-cd ${docs}/5.2 && git pull origin 5.2
-cd ${docs}/5.3 && git pull origin 5.3
-cd ${docs}/5.4 && git pull origin 5.4
-cd ${docs}/5.5 && git pull origin 5.5
-cd ${docs}/master && git pull origin master
+# Cleanup Before
+rm -rf ${base}/resources/docs
+
+docs=${base}/resources/docs
+build=${docs}/build
+
+# Run API Docs
+git clone https://github.com/LewMar/docs.git ${build}/docs
+
+for version in 4.2 5.0 5.1 5.2 5.3 5.4 5.5 5.5-pl master;
+do
+cp -r ${build}/docs ${docs}/${version}
+cd ${docs}/${version} && git checkout $version
+done
+
+# Cleanup After
+rm -rf ${docs}/build
 
 cd $base && php artisan docs:clear-cache
