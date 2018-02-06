@@ -10,7 +10,7 @@ build=${docs}/build
 # Run API Docs
 git clone https://github.com/LewMar/docs.git ${build}/docs
 
-for version in 4.2 5.0 5.1 5.2 5.3 5.4 5.5 5.5-pl master;
+for version in 4.2 5.0 5.1 5.2 5.3 5.4 5.5 5.5-pl 5.6-pl master;
 do
 cp -r ${build}/docs ${docs}/${version}
 cd ${docs}/${version} && git checkout $version

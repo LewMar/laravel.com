@@ -9,11 +9,13 @@
 	<ul class="dropdown-menu" role="menu">
 
 		<li><a href="https://envoyer.io">Envoyer</a></li>
+		<li><a href="https://horizon.laravel.com">Horizon</a></li>
 		<li><a href="https://lumen.laravel.com">Lumen</a></li>
 		<li><a href="https://spark.laravel.com">Spark</a></li>
 
 		<li class="divider"></li>
 
+		<li><a href="https://laracon.com.au">Laracon AU</a></li>
 		<li><a href="https://laracon.eu">Laracon EU</a></li>
 		<li><a href="http://laracon.us">Laracon US</a></li>
 		<li><a href="https://laracon.net">Laracon Online</a></li>
